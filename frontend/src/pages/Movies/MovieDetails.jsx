@@ -40,7 +40,7 @@ const MovieDetails = () => {
       <div>
         <Link
           to="/"
-          className="  text-white font-semibold hover:underline ml-[20rem]"
+          className="  text-white font-semibold hover:underline  ml-[20rem]"
         >
           Go Back
         </Link>
@@ -51,7 +51,7 @@ const MovieDetails = () => {
           <img
             src={movie?.image}
             alt={movie?.name}
-            className="w-[70%] rounded"
+            className="w-[20%] rounded"
           />
         </div>
         {/* Container One */}
