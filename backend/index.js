@@ -10,6 +10,7 @@ import userRoutes from "./routes/userRoutes.js";
 import genreRoutes from "./routes/genreRoutes.js";
 import moviesRoutes from "./routes/moviesRoutes.js";
 import uploadRoutes from "./routes/uploadRoutes.js";
+import Movie from "./models/Movie.js";
 
 // Configuration
 dotenv.config();
@@ -23,7 +24,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 const PORT = process.env.PORT || 3000;
-
+app.use("/",async (req,res)=>{
+    res.status(200).json(await Movie.find({}));
+});
 // Routes
 app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/genre", genreRoutes);

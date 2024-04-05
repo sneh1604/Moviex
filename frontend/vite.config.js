@@ -6,8 +6,8 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      "/api/": "http://localhost:3000",
-      "/uploads/": "http://localhost:3000",
+      "/api/": "https://moviex-87oaxl017-sneh1604s-projects.vercel.app",
+      "/uploads/": "https://moviex-87oaxl017-sneh1604s-projects.vercel.app",
     },
   },
 });
