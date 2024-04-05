@@ -11,7 +11,7 @@ import genreRoutes from "./routes/genreRoutes.js";
 import moviesRoutes from "./routes/moviesRoutes.js";
 import uploadRoutes from "./routes/uploadRoutes.js";
 import Movie from "./models/Movie.js";
-
+import cors from 'cors';
 // Configuration
 dotenv.config();
 connectDB();
@@ -20,6 +20,7 @@ const app = express();
 
 // middlewares
 app.use(express.json());
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
